@@ -14,40 +14,70 @@
             color: #333;
         }
 
+        /* Header Styling */
         header {
             background-color: #2c3e50;
             color: white;
-            padding: 20px;
+            padding: 10px 20px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 1.2em;
-        }
-
-        .logo-container {
-            display: flex;
+            flex-direction: column;
             align-items: center;
         }
 
-        .logo {
-            width: 100px; /* Increased logo size */
-            margin-right: 15px;
+        /* Top Bar with Social Links */
+        .social-links {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            background-color: #34495e;
+            padding: 10px;
+            box-sizing: border-box;
         }
 
-        .logo-container h1 {
-            font-size: 28px;
-            margin: 0;
-            font-weight: 700;
+        .social-links a {
+            margin-left: 10px;
+            color: white;
+            text-decoration: none;
         }
 
+        .social-links img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+        }
+
+        /* Contact Info */
         .contact-info {
-            font-size: 16px;
+            text-align: right;
+            font-size: 14px;
+            margin: 10px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
         }
 
         .contact-info img {
             vertical-align: middle;
             width: 20px;
-            margin-right: 8px;
+            margin-right: 5px;
+        }
+
+        /* Logo Styling */
+        .logo-container {
+            background-color: white;
+            padding: 20px 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+            width: 400px;
         }
 
         /* Styling for laptop section */
@@ -55,6 +85,7 @@
             padding: 50px 20px;
             max-width: 1200px;
             margin: auto;
+            box-sizing: border-box;
         }
 
         #laptops h2 {
@@ -75,7 +106,8 @@
         .laptop-item {
             background-color: #ffffff;
             padding: 20px;
-            width: 300px;
+            width: 100%;
+            max-width: 300px;
             border: 2px solid #3498db;
             border-radius: 12px;
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
@@ -110,6 +142,45 @@
             color: #e74c3c;
         }
 
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .social-links, .contact-info {
+                text-align: center;
+            }
+
+            .laptop-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .logo-container img {
+                width: 300px;
+            }
+        }
+
+        /* For extra small devices (phones, less than 600px) */
+        @media (max-width: 600px) {
+            .social-links {
+                padding: 5px;
+            }
+
+            .social-links img {
+                width: 20px;
+            }
+
+            .contact-info {
+                font-size: 12px;
+            }
+
+            #laptops h2 {
+                font-size: 28px;
+            }
+
+            .laptop-item {
+                width: 90%;
+            }
+        }
+
         footer {
             background-color: #2c3e50;
             padding: 20px;
@@ -120,29 +191,45 @@
         footer p {
             margin: 0;
         }
-
     </style>
 </head>
 <body>
 
     <!-- Header Section -->
     <header>
-        <div class="logo-container">
-            <img src="CLASSIC COMPUTERS LOGO.png" alt="Classic Computers Logo" class="logo">
-            <h1>Welcome to Classic Computers!</h1> <!-- Updated header text -->
+         <div class="social-links">
+            <a href="https://www.facebook.com/villagemirror143?mibextid=ZbWKwL" target="_blank">
+                <img src="facebook.png" alt="Facebook">
+            </a>
+            <a href="https://instagram.com/classic_computers1?igshid=ZDdkNTZiNTM=" target="_blank">
+                <img src="instagram.jfif" alt="Instagram">
+            </a>
+            <a href="https://youtube.com/@classic_computers" target="_blank">
+                <img src="youtube.png" alt="YouTube">
+            </a>
+            <a href="https://maps.google.com/?q=Classic+Computers" target="_blank">
+                <img src="gmaps.png" alt="Google Maps">
+            </a>
         </div>
+        <!-- Contact Information -->
         <div class="contact-info">
             <p>
-                <img src="images/whatsapp-icon.png" alt="WhatsApp"> +91-9550191261 | Email: <a href="mailto:villagemirror143@gmail.com" style="color: white;">villagemirror143@gmail.com</a>
+                <img src="whatapp.png" alt="WhatsApp"> +91-9550191261 | Email: <a href="mailto:villagemirror143@gmail.com" style="color: white;">villagemirror143@gmail.com</a>
             </p>
         </div>
+
+        <!-- Logo with White Background -->
+        <div class="logo-container">
+            <img src="CLASSIC COMPUTERS LOGO.png" alt="Classic Computers Logo">
+        </div>
+
     </header>
 
     <!-- Available Laptops Section -->
     <section id="laptops">
         <h2>Top Quality Used Laptops</h2>
         <div class="laptop-list">
-            <!-- Laptop 1 -->
+            <!-- Start of Laptop Items -->
             <div class="laptop-item">
                 <h3>Dell 7490</h3>
                 <p><strong>Processor:</strong> i5 8th Gen</p>
@@ -151,7 +238,6 @@
                 <p><strong>Touchscreen:</strong> No</p>
                 <p><strong>Price:</strong> ₹21,000</p>
             </div>
-            <!-- Laptop 2 -->
             <div class="laptop-item">
                 <h3>Dell 7490</h3>
                 <p><strong>Processor:</strong> i5 8th Gen</p>
@@ -160,7 +246,6 @@
                 <p><strong>Touchscreen:</strong> Yes</p>
                 <p><strong>Price:</strong> ₹23,000</p>
             </div>
-            <!-- Laptop 3 -->
             <div class="laptop-item">
                 <h3>Dell 7490</h3>
                 <p><strong>Processor:</strong> i5 8th Gen</p>
@@ -169,7 +254,6 @@
                 <p><strong>Touchscreen:</strong> Yes</p>
                 <p><strong>Price:</strong> ₹23,000</p>
             </div>
-            <!-- Laptop 4 -->
             <div class="laptop-item">
                 <h3>Dell 5400</h3>
                 <p><strong>Processor:</strong> i5 8th Gen</p>
@@ -178,7 +262,6 @@
                 <p><strong>Touchscreen:</strong> No</p>
                 <p><strong>Price:</strong> ₹21,000</p>
             </div>
-            <!-- Laptop 5 -->
             <div class="laptop-item">
                 <h3>Dell 5420</h3>
                 <p><strong>Processor:</strong> i5 11th Gen</p>
@@ -187,7 +270,6 @@
                 <p><strong>Touchscreen:</strong> No</p>
                 <p><strong>Price:</strong> ₹30,000</p>
             </div>
-            <!-- Laptop 6 -->
             <div class="laptop-item">
                 <h3>Dell 5410</h3>
                 <p><strong>Processor:</strong> i5 10th Gen</p>
@@ -196,7 +278,6 @@
                 <p><strong>Touchscreen:</strong> No</p>
                 <p><strong>Price:</strong> ₹26,000</p>
             </div>
-            <!-- Laptop 7 -->
             <div class="laptop-item">
                 <h3>Dell 5280</h3>
                 <p><strong>Processor:</strong> i5 7th Gen</p>
@@ -205,7 +286,6 @@
                 <p><strong>Touchscreen:</strong> No</p>
                 <p><strong>Price:</strong> ₹15,000</p>
             </div>
-            <!-- Laptop 8 -->
             <div class="laptop-item">
                 <h3>Dell 5290</h3>
                 <p><strong>Processor:</strong> i5 7th Gen</p>
@@ -214,7 +294,6 @@
                 <p><strong>Touchscreen:</strong> No</p>
                 <p><strong>Price:</strong> ₹15,000</p>
             </div>
-            <!-- Laptop 9 -->
             <div class="laptop-item">
                 <h3>Dell 5480</h3>
                 <p><strong>Processor:</strong> i5 7th Gen</p>
@@ -223,25 +302,62 @@
                 <p><strong>Touchscreen:</strong> No</p>
                 <p><strong>Price:</strong> ₹15,000</p>
             </div>
-            <!-- Laptop 10 -->
             <div class="laptop-item">
                 <h3>Lenovo L460</h3>
                 <p><strong>Processor:</strong> i5 6th Gen</p>
                 <p><strong>RAM:</strong> 8 GB</p>
                 <p><strong>Storage:</strong> 256 GB SSD</p>
                 <p><strong>Touchscreen:</strong> No</p>
-                <p><strong>Price:</strong> ₹12,000</p>
+                <p><strong>Price:</strong> ₹14,000</p>
             </div>
-            <!-- Laptop 11 -->
             <div class="laptop-item">
-                <h3>Lenovo L470</h3>
-                <p><strong>Processor:</strong> i5 7th Gen</p>
+                <h3>Lenovo L490</h3>
+                <p><strong>Processor:</strong> i5 8th Gen</p>
                 <p><strong>RAM:</strong> 8 GB</p>
                 <p><strong>Storage:</strong> 256 GB SSD</p>
                 <p><strong>Touchscreen:</strong> No</p>
-                <p><strong>Price:</strong> ₹15,000</p>
+                <p><strong>Price:</strong> ₹17,000</p>
             </div>
-            <!-- Laptop 12 -->
+            <div class="laptop-item">
+                <h3>Lenovo L14</h3>
+                <p><strong>Processor:</strong> i5 10th Gen</p>
+                <p><strong>RAM:</strong> 8 GB</p>
+                <p><strong>Storage:</strong> 256 GB SSD</p>
+                <p><strong>Touchscreen:</strong> No</p>
+                <p><strong>Price:</strong> ₹24,500</p>
+            </div>
+            <div class="laptop-item">
+                <h3>Lenovo T480s</h3>
+                <p><strong>Processor:</strong> i7 8th Gen</p>
+                <p><strong>RAM:</strong> 8 GB</p>
+                <p><strong>Storage:</strong> 256 GB SSD</p>
+                <p><strong>Touchscreen:</strong> Yes</p>
+                <p><strong>Price:</strong> ₹25,500</p>
+            </div>
+            <div class="laptop-item">
+                <h3>Lenovo T480</h3>
+                <p><strong>Processor:</strong> i7 8th Gen</p>
+                <p><strong>RAM:</strong> 8 GB</p>
+                <p><strong>Storage:</strong> 256 GB SSD</p>
+                <p><strong>Touchscreen:</strong> No</p>
+                <p><strong>Price:</strong> ₹24,000</p>
+            </div>
+            <div class="laptop-item">
+                <h3>Lenovo T480</h3>
+                <p><strong>Processor:</strong> i5 8th Gen</p>
+                <p><strong>RAM:</strong> 8 GB</p>
+                <p><strong>Storage:</strong> 256 GB SSD</p>
+                <p><strong>Touchscreen:</strong> No</p>
+                <p><strong>Price:</strong> ₹18,000</p>
+            </div>
+            <div class="laptop-item">
+                <h3>HP 830 G6</h3>
+                <p><strong>Processor:</strong> i5 8th Gen</p>
+                <p><strong>RAM:</strong> 8 GB</p>
+                <p><strong>Storage:</strong> 256 GB SSD</p>
+                <p><strong>Touchscreen:</strong> No</p>
+                <p><strong>Price:</strong> ₹22,000</p>
+            </div>
             <div class="laptop-item">
                 <h3>HP Elitebook 745 G6</h3>
                 <p><strong>Processor:</strong> Ryzen 5 Pro</p>
@@ -250,73 +366,16 @@
                 <p><strong>Touchscreen:</strong> No</p>
                 <p><strong>Price:</strong> ₹18,000</p>
             </div>
-            <!-- Laptop 13 -->
-            <div class="laptop-item">
-                <h3>HP Elitebook 840 G5</h3>
-                <p><strong>Processor:</strong> i5 8th Gen</p>
-                <p><strong>RAM:</strong> 8 GB</p>
-                <p><strong>Storage:</strong> 512 GB SSD</p>
-                <p><strong>Touchscreen:</strong> No</p>
-                <p><strong>Price:</strong> ₹26,000</p>
-            </div>
-            <!-- Laptop 14 -->
-            <div class="laptop-item">
-                <h3>HP 840 G3</h3>
-                <p><strong>Processor:</strong> i5 6th Gen</p>
-                <p><strong>RAM:</strong> 8 GB</p>
-                <p><strong>Storage:</strong> 256 GB SSD</p>
-                <p><strong>Touchscreen:</strong> No</p>
-                <p><strong>Price:</strong> ₹16,000</p>
-            </div>
-            <!-- Laptop 15 -->
-            <div class="laptop-item">
-                <h3>HP 840 G4</h3>
-                <p><strong>Processor:</strong> i5 7th Gen</p>
-                <p><strong>RAM:</strong> 8 GB</p>
-                <p><strong>Storage:</strong> 256 GB SSD</p>
-                <p><strong>Touchscreen:</strong> No</p>
-                <p><strong>Price:</strong> ₹18,000</p>
-            </div>
-            <!-- Laptop 16 -->
-            <div class="laptop-item">
-                <h3>HP ProBook 440 G5</h3>
-                <p><strong>Processor:</strong> i5 7th Gen</p>
-                <p><strong>RAM:</strong> 8 GB</p>
-                <p><strong>Storage:</strong> 256 GB SSD</p>
-                <p><strong>Touchscreen:</strong> No</p>
-                <p><strong>Price:</strong> ₹20,000</p>
-            </div>
-            <!-- Laptop 17 -->
-            <div class="laptop-item">
-                <h3>Lenovo X270</h3>
-                <p><strong>Processor:</strong> i5 6th Gen</p>
-                <p><strong>RAM:</strong> 8 GB</p>
-                <p><strong>Storage:</strong> 256 GB SSD</p>
-                <p><strong>Touchscreen:</strong> No</p>
-                <p><strong>Price:</strong> ₹18,000</p>
-            </div>
+            <!-- End of Laptop Items -->
         </div>
     </section>
-    <div class="container">
-        <h2>Follow Us:</h2>
-        <div class="social-media">
-            <a href="https://www.facebook.com/villagemirror143?mibextid=ZbWKwL" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-                Facebook @ https://www.facebook.com/villagemirror143?mibextid=ZbWKwL
-            </a>
-            <a href="https://instagram.com/classic_computers1?igshid=ZDdkNTZiNTM=" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-                Instagram @ https://instagram.com/classic_computers1?igshid=ZDdkNTZiNTM=
-            </a>
-            <a href="https://youtube.com/@classic_computers" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube">
-                YouTube @ https://youtube.com/@classic_computers
-            </a>
-        </div>
-    </div>
+
+    <!-- Social Media Links -->
+    
+
     <!-- Footer Section -->
     <footer>
-        <p>© 2024 Classic Computers - All Rights Reserved</p>
+        <p>&copy; 2024 Classic Computers. All rights reserved.</p>
     </footer>
 
 </body>
