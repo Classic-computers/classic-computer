@@ -241,21 +241,41 @@
             <button class="view-more-btn" onclick="toggleImages(this)">View More</button>
         </div>
         <div class="laptop-item">
-            <h3>Dell 5310</h3>
-            <p><strong>Processor:</strong> i7 10th Gen</p>
-            <p><strong>RAM:</strong> 8 GB</p>
-            <p><strong>Storage:</strong> 256 GB SSD</p>
-            <p><strong>Touchscreen:</strong> yes</p>
-            <p><strong>Price:</strong> ₹30,000</p>
-            <img src="dell-5310/dell-5310.2.jpeg" alt="Dell 5310 Laptop">
-            <img src="dell-5310/dell-5310.0.jpeg" alt="Dell 5310 Laptop" class="extra-images" style="display: none;">
-            <img src="dell-5310/dell-5310.1.jpeg" alt="Dell 5310 Laptop" class="extra-images" style="display: none;">
-            <img src="dell-5310/dell-5310.3.jpeg" alt="Dell 5310 Laptop" class="extra-images" style="display: none;">
-            <img src="dell-5310/dell-5310.4.jpeg" alt="Dell 5310 Laptop" class="extra-images" style="display: none;">
-            <img src="dell-5310/dell-5310.5.jpeg" alt="Dell 5310 Laptop" class="extra-images" style="display: none;">
-            <img src="dell-5310/dell-5310.6.jpeg" alt="Dell 5310 Laptop" class="extra-images" style="display: none;">
-            <button class="view-more-btn" onclick="toggleImages(this)">View More</button>
-        </div>
+    <h3>Dell 5310</h3>
+    <p><strong>Processor:</strong> i7 10th Gen</p>
+    <p><strong>RAM:</strong> 8 GB</p>
+    <p><strong>Storage:</strong> 256 GB SSD</p>
+    <p><strong>Touchscreen:</strong> yes</p>
+    <p><strong>Price:</strong> ₹30,000</p>
+    
+    <!-- Images -->
+    <img src="dell-5310/dell-5310.2.jpeg" alt="Dell 5310 Laptop" class="laptop-image">
+    <img src="dell-5310/dell-5310.0.jpeg" alt="Dell 5310 Laptop" class="laptop-image extra-images" style="display: none;">
+    <img src="dell-5310/dell-5310.1.jpeg" alt="Dell 5310 Laptop" class="laptop-image extra-images" style="display: none;">
+    <img src="dell-5310/dell-5310.3.jpeg" alt="Dell 5310 Laptop" class="laptop-image extra-images" style="display: none;">
+    <img src="dell-5310/dell-5310.4.jpeg" alt="Dell 5310 Laptop" class="laptop-image extra-images" style="display: none;">
+    <img src="dell-5310/dell-5310.5.jpeg" alt="Dell 5310 Laptop" class="laptop-image extra-images" style="display: none;">
+    <img src="dell-5310/dell-5310.6.jpeg" alt="Dell 5310 Laptop" class="laptop-image extra-images" style="display: none;">
+    
+    <!-- View More Button -->
+    <button class="view-more-btn" onclick="toggleImages(this)">View More</button>
+</div>
+
+<!-- CSS to ensure uniform image size -->
+<style>
+    .laptop-image {
+        width: 200px;  /* You can adjust this to your desired width */
+        height: 150px; /* Adjust this as needed for uniform height */
+        object-fit: cover; /* Ensures the images maintain their aspect ratio while filling the box */
+        margin-bottom: 10px; /* Space between images */
+        display: block; /* Ensure images are block-level elements */
+    }
+    
+    /* Optional: Add spacing between the image grid */
+    .laptop-item img {
+        margin-right: 10px; /* Horizontal spacing between images */
+    }
+</style>
         <div class="laptop-item">
             <h3>Dell 7490</h3>
             <p><strong>Processor:</strong> i5 8th Gen</p>
