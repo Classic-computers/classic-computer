@@ -225,32 +225,36 @@
 
     </header>
 
-    <!-- Available Laptops Section -->
     <section id="laptops">
-        <h2>Top Quality Used Laptops</h2>
-        <div class="laptop-list">
-            <!-- Start of Laptop Items -->
-            <div class="laptop-item">
-                <h3>Dell 7490</h3>
-                <p><strong>Processor:</strong> i5 8th Gen</p>
-                <p><strong>RAM:</strong> 8 GB</p>
-                <p><strong>Storage:</strong> 256 GB SSD</p>
-                <p><strong>Touchscreen:</strong> No</p>
-                <p><strong>Price:</strong> ₹21,000</p>
-                <img src="dell_7490.jfif" alt="Dell 7490 Laptop">
-                <img src="dell_7490.jfif" alt="Dell 7490 Laptop">
-                <img src="dell_7490.jfif" alt="Dell 7490 Laptop">
-                <img src="dell_7490.jfif" alt="Dell 7490 Laptop">
-            </div>
-            <div class="laptop-item">
-                <h3>Dell 7490</h3>
-                <p><strong>Processor:</strong> i5 8th Gen</p>
-                <p><strong>RAM:</strong> 8 GB</p>
-                <p><strong>Storage:</strong> 256 GB SSD</p>
-                <p><strong>Touchscreen:</strong> Yes</p>
-                <p><strong>Price:</strong> ₹23,000</p>
-                <img src="dell_7490.jfif" alt="Dell 7490 Laptop">
-            </div>
+    <h2>Top Quality Used Laptops</h2>
+    <div class="laptop-list">
+        <!-- Start of Laptop Items -->
+        <div class="laptop-item">
+            <h3>Dell 7490</h3>
+            <p><strong>Processor:</strong> i5 8th Gen</p>
+            <p><strong>RAM:</strong> 8 GB</p>
+            <p><strong>Storage:</strong> 256 GB SSD</p>
+            <p><strong>Touchscreen:</strong> No</p>
+            <p><strong>Price:</strong> ₹21,000</p>
+            <img src="dell_7490.jfif" alt="Dell 7490 Laptop">
+            <img src="dell_7490.jfif" alt="Dell 7490 Laptop" class="extra-images" style="display: none;">
+            <img src="dell_7490.jfif" alt="Dell 7490 Laptop" class="extra-images" style="display: none;">
+            <img src="dell_7490.jfif" alt="Dell 7490 Laptop" class="extra-images" style="display: none;">
+            <button class="view-more-btn" onclick="toggleImages(this)">View More</button>
+        </div>
+        <div class="laptop-item">
+            <h3>Dell 7490</h3>
+            <p><strong>Processor:</strong> i5 8th Gen</p>
+            <p><strong>RAM:</strong> 8 GB</p>
+            <p><strong>Storage:</strong> 256 GB SSD</p>
+            <p><strong>Touchscreen:</strong> Yes</p>
+            <p><strong>Price:</strong> ₹23,000</p>
+            <img src="dell_7490.jfif" alt="Dell 7490 Laptop">
+            <img src="dell_7490.jfif" alt="Dell 7490 Laptop" class="extra-images" style="display: none;">
+            <img src="dell_7490.jfif" alt="Dell 7490 Laptop" class="extra-images" style="display: none;">
+            <img src="dell_7490.jfif" alt="Dell 7490 Laptop" class="extra-images" style="display: none;">
+            <button class="view-more-btn" onclick="toggleImages(this)">View More</button>
+        </div>
             <div class="laptop-item">
                 <h3>Dell 7490</h3>
                 <p><strong>Processor:</strong> i5 8th Gen</p>
@@ -375,6 +379,31 @@
             <!-- End of Laptop Items -->
         </div>
     </section>
+<!-- JavaScript to handle "View More" functionality -->
+<script>
+    function toggleImages(button) {
+        // Get all images within the parent laptop-item
+        const laptopItem = button.parentElement;
+        const extraImages = laptopItem.querySelectorAll('.extra-images');
+        
+        // Toggle the display of extra images
+        extraImages.forEach(image => {
+            if (image.style.display === 'none') {
+                image.style.display = 'block';
+            } else {
+                image.style.display = 'none';
+            }
+        });
+
+        // Change button text based on the state of the images
+        const allImagesVisible = Array.from(extraImages).every(image => image.style.display === 'block');
+        if (allImagesVisible) {
+            button.textContent = 'View Less';
+        } else {
+            button.textContent = 'View More';
+        }
+    }
+</script>
 
     <!-- Social Media Links -->
     
